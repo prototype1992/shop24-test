@@ -1,0 +1,57 @@
+
+.clr() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.products-view() {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #1998a7;
+    color: #ffffff;
+    padding: 7px 25px 7px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 640px) {
+        float: none;
+        text-align: center;
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 11px;
+        top: 50%;
+        background-image: url('../img/view-arrow.png');
+        width: 8px;
+        height: 5px;
+        margin-top: -2px;
+    }
+    &.active {
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.products-title() {
+    display: inline-block;
+    font-size: 22px;
+    color: #0d8290;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    @media (max-width: 640px) {
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
